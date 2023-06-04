@@ -1,15 +1,24 @@
 <?php 
 /*
-*Taller métodos arrays
-*Punto 2
+*todo Taller métodos arrays
+*Punto 3
 */
+$planetas = array (
+    'Sol' =>false,
+    'Mercurio' => false,
+    'Venus' => false,
+    'Tierra' => true,
+    'Marte' => true,
+    'Jupiter' => false,
+    'Saturno' => true,
+    'Urano' => false,
+    'Neptuno' => false
+);
 
-$planetas = array();
-for ($i=0; $i<$_POST["nplanetas"]; $i++){
-    $key = "Planeta #".$i;
-    $valor = "Deshabitado";
-    $planetas[$key] = $valor;
-};
-
-print_r($planetas);
+$resultado = array_filter($planetas,function ($e){
+    if($e ==true){
+        return $e;
+    };
+}); 
+print_r($resultado)
 ?>
