@@ -1,24 +1,26 @@
 <?php 
 /*
 *todo Taller métodos arrays
-*Punto 3
+*Punto 4
+*debo hacer la funcion antes de usar el map
 */
-$planetas = array (
-    'Sol' =>false,
-    'Mercurio' => false,
-    'Venus' => false,
-    'Tierra' => true,
-    'Marte' => true,
-    'Jupiter' => false,
-    'Saturno' => true,
-    'Urano' => false,
-    'Neptuno' => false
+
+$gplanetas = array (
+    'Sol' => 1/3,
+    'Mercurio' => 1/4,
+    'Venus' => 2/3,
+    'Marte' => 4/8,
+    'Jupiter' => 7/10,
+    'Saturno' => 6/8,
+    'Urano' => 2/3,
+    'Neptuno' => 1/10
 );
 
-$resultado = array_filter($planetas,function ($e){
-    if($e ==true){
-        return $e;
-    };
-}); 
-print_r($resultado)
+function calcular_gravedad($value,$key){
+    $gravedad_tierra = 9.8;
+    echo "El $key tiene una gravedad de: ". $value*$gravedad_tierra."<br>";
+
+};
+
+array_walk($gplanetas,"calcular_gravedad");
 ?>
