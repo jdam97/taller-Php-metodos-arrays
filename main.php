@@ -1,20 +1,14 @@
 <?php 
 /*
 *todo Taller métodos arrays
-*Punto 5
+*Punto 6
 */
 
-$naves = array(
-    "apolo" => 2,
-    "La estrella de la muerte" => 10,
-    "sputnik" => 5,
-    "artemis" => 8
-);
+$planetas = ["Mercury", "Venus", "Tierra", "Marte", "Jupiter", "Saturno","Urano","Neptuno"];
 
-function sumar ($naves){
-    $total = array_sum($naves);
-    return $total;
-};
-$resultado = sumar($naves);
-print "Masa total de todas las naves: ".$resultado;
+if (in_array("Tierra",$planetas )){
+    echo "El planeta existe";
+}
+else {echo "No existe dentro del sistema solar"; };
+
 ?>
