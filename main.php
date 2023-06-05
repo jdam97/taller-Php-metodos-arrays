@@ -1,18 +1,21 @@
 <?php 
 /*
 *todo Taller métodos arrays
-*Punto 8
+*Punto 9
 */
-$naves =  array(
-"Mercurio",
-"Venus",
-"Tierra",
-"Marte",
-"Jupiter"
-,"Saturno"
-,"Urano");
+$alienigenas =  array(
+"Marvin el marciano",
+"E.T vuelve a casa",
+"Alien",
+"Pedrator",
+"Alf",
+"Demogorgon",
+"Alien",
+"Demogorgon",
+"Freezer"
+);
 
-$resultado = array_rand($naves);
-echo $naves[$resultado];
+$resultado = array_unique($alienigenas);
+print_r($resultado);
 
 ?>
