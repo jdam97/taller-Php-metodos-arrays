@@ -1,36 +1,23 @@
 <?php 
 /*
 *todo Taller métodos arrays
-*Punto 11
+*Punto 13
 */
-$galaxia1 =  array(
+$planetas =  array(
     "Mercurio",
     "Venus",
     "Tierra",
     "Marte",
     "Jupiter",
     "Saturno",
-    "Urano"
+    "Urano",
+    "Neptuno",
 );
 
-$galaxia2 =  array(
-    "planeta1",
-    "planeta2",
-    "planeta3",
-    "Tierra",
-    "Jupiter",
-    "Saturno",
-    "planeta7",
-    "planeata8",
-    "Mercurio",
-);
-
-$resultado =array_diff($galaxia1,$galaxia2);
-
-$total = array_diff($galaxia2,$galaxia1);
-echo "Galaxia 1: ";
-print_r($resultado);
+$resultado = array_reverse($planetas,true);
+echo "Array original:";
+print_r($planetas);
 echo "<br>";
-echo "Galaxia 2: ";
-print_r($total);
+echo "Array reverso:";
+print_r($resultado);
 ?>
