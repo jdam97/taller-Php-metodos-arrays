@@ -1,21 +1,31 @@
 <?php 
 /*
 *todo Taller métodos arrays
-*Punto 9
+*Punto 10
 */
-$alienigenas =  array(
-"Marvin el marciano",
-"E.T vuelve a casa",
-"Alien",
-"Pedrator",
-"Alf",
-"Demogorgon",
-"Alien",
-"Demogorgon",
-"Freezer"
+$viaLactea =  array(
+    "Mercurio",
+    "Venus",
+    "Tierra",
+    "Marte",
+    "Jupiter",
+    "Saturno",
+    "Urano"
 );
 
-$resultado = array_unique($alienigenas);
+$otraGalaxia =  array(
+    "planeta1",
+    "planeta2",
+    "planeta3",
+    "Tierra",
+    "Jupiter",
+    "Saturno",
+    "planeta7",
+    "planeata8",
+    "Mercurio",
+);
+
+$resultado = array_intersect($viaLactea,$otraGalaxia);
 print_r($resultado);
 
 ?>
