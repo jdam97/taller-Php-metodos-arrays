@@ -1,9 +1,9 @@
 <?php 
 /*
 *todo Taller métodos arrays
-*Punto 10
+*Punto 11
 */
-$viaLactea =  array(
+$galaxia1 =  array(
     "Mercurio",
     "Venus",
     "Tierra",
@@ -13,7 +13,7 @@ $viaLactea =  array(
     "Urano"
 );
 
-$otraGalaxia =  array(
+$galaxia2 =  array(
     "planeta1",
     "planeta2",
     "planeta3",
@@ -25,7 +25,12 @@ $otraGalaxia =  array(
     "Mercurio",
 );
 
-$resultado = array_intersect($viaLactea,$otraGalaxia);
-print_r($resultado);
+$resultado =array_diff($galaxia1,$galaxia2);
 
+$total = array_diff($galaxia2,$galaxia1);
+echo "Galaxia 1: ";
+print_r($resultado);
+echo "<br>";
+echo "Galaxia 2: ";
+print_r($total);
 ?>
